@@ -28,9 +28,11 @@ const App = () => {
     useEffect(() => {
         if (bounds.sw && bounds.ne) {
         setIsLoading(true);
+
         /* Set weather for current geolocation */
         getWeatherData(coordinates.lat, coordinates.lng)
-            .then((data) => setWeatherData=(data));
+            .then((data) => setWeatherData(data));
+
         /* Set view of location filtered */
         getPlacesData(type, bounds.sw, bounds.ne)
             .then((data) => {
