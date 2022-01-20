@@ -33,8 +33,7 @@ const Map = ({setCoordinates, setBounds, coordinates, places, setChildClicked, w
                         lng={Number(place.longitude)}
                         key={i}
                     >
-                        {
-                            !isDesktop ? (
+                        { !isDesktop ? (
                                 <LocationOnOutlinedIcon color="primary" fontSize="large"/>
 
                             ) : (
